@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Main entry point for Tailwind overrides and components.
+
+  Lot's of customisations can be done via the config so check that out before writing CSS:
+  📚 https: //tailwindcss.com/docs/adding-custom-styles
+*/

@@ -1,0 +1,67 @@
+﻿<readme>
+2022-05-13: This is a first attempt at creating an experimenter tracker. It relies on having Python3 and nextJS.
+
+
+This example content file shows how you need to prepare your content. To add a new experiment follow the syntax of the below examples. Specifically:
+* The experiment title needs a hashtag (e.g # Experiment title)
+* Every other field needs the key name (e.g. ‘Belief:’)
+* All fields are optional
+* **Strong**, _emphasis_ and [link](https://#) markdown syntax is allowed. Everything is will blow stuff up
+* You can have as many, or as few, hypotheses from an experiment as you’d like. You need to separate them with three asterisks e.g. ‘***’
+* The order in this document isn’t important. The date field is currently what’s used for sorting.
+
+
+You probably shouldn’t use this text file to make changes but have a master doc in Google Docs (other providers available!) where you’ll get ‘version history’ of the doc and multiple authors can easily contribute.
+
+
+Once you’re happy with the contents, save/update the file and, from Terminal, run
+* python3 txt_to_md.py
+
+
+This section of the document will be ignored. The rest of the document will be read. You will end up with a folder structure of
+- experiments/
+– experiment1/
+—-- index.md
+—-- hypotheses/
+—------ hypothesis1.md
+—------ hypothesis2.md
+– experiment2/
+—-- index.md
+—-- hypotheses/
+—------ hypothesis1.md
+—------ hypothesis2.md
+</readme>
+
+
+# Experiment 1
+Date: 2022-05-28
+
+
+<hypotheses>
+Belief: That the hypothesis for experiment 1 would be good
+Status: Validated
+Why: We discovered that this worked.
+New thinking: We now believe that we can have a more generalised view about how future experiments will work.
+</hypotheses>
+
+
+
+
+# Experiment 2
+Date: 2022-05-29
+
+
+<hypotheses>
+Belief: That we could do this in an hour
+Status: Validated
+Why: Successfully deployed to Github
+***
+Belief: That it would be useful
+Status: Invalidated
+Why: No evidence to support the hypothesis
+New thinking: That we need to do a subsequent experiment (gotta get paid after all!)
+***
+Belief: That GPT4 would have been quicker
+Status: Invalidated 
+New thinking: The hypotheses the machine gave were rubbish. Your job is safe!
+</hypotheses>
