@@ -3,6 +3,11 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 
+marked.setOptions({
+  mangle: false,
+  headerIds: false,
+});
+
 export interface HypothesisData {
   title: string;
   status: string;

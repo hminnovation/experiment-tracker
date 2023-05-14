@@ -1,0 +1,514 @@
+<readme>
+2022-05-13: View this document for the model + structure to use Experiment tracker website content example v2 (model)
+</readme>
+
+# GPT4 generated
+Start date: 2022-06-02
+Completed: True
+Started: True
+Phase: Sustain
+Project description: This project involves creating a SaaS service that uses AI to enhance data analysis capabilities within Google's BigQuery data lake.
+
+~~~Problem~~~
+Start date: 2022-06-02
+End date: 2022-06-08
+Comment: Identified a need for better data analysis in BigQuery.
+
+<hypotheses>
+Belief: BigQuery users struggle with complex data analysis tasks.
+Method: Survey(s)
+Date: 2022-06-02
+Completed: True
+Main metric: Desirability
+Status: Validated
+Why: Survey showed many users find complex analysis challenging.
+New thinking: An AI-powered tool could simplify this process.
+
+***
+Belief: AI can significantly improve data analysis in BigQuery.
+Method: Thought experiment / Data Analysis
+Date: 2022-06-05
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: AI has been successful in similar data analysis scenarios.
+New thinking: We can develop a SaaS tool to provide this solution.
+
+***
+Belief: Customers are willing to pay for improved data analysis in BigQuery.
+Method: Interview(s)
+Date: 2022-06-07
+Completed: True
+Main metric: Desirability
+Status: Validated
+Why: Interviews indicate customers value effective data analysis and are willing to pay for improvements.
+New thinking: We can develop a subscription-based model for our service.
+</hypotheses>
+
+~~~Idea~~~
+Start date: 2022-06-09
+End date: 2022-06-16
+Comment: Development of initial concepts and solutions.
+
+<hypotheses>
+Belief: Our SaaS tool can be seamlessly integrated into BigQuery.
+Method: Prototyping
+Date: 2022-06-10
+Completed: True
+Main metric: Feasibility
+Status: Validated
+Why: Initial prototypes show successful integration.
+New thinking: We should focus on creating a user-friendly interface to simplify the integration process.
+
+***
+Belief: Our tool can analyze data faster than existing methods.
+Method: Prototype / Data Analysis
+Date: 2022-06-13
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: Prototype testing showed significant improvements in analysis speed.
+New thinking: We should highlight speed as a key selling point.
+
+***
+Belief: AI can accurately predict trends based on BigQuery data.
+Method: Data Analysis / Field Trial
+Date: 2022-06-15
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: AI predictions closely matched real-world trends.
+New thinking: Predictive capabilities could be a major feature of our tool.
+</hypotheses>
+
+Start date: 2022-06-17
+End date: 2022-06-24
+Comment: Initial product built and tested.
+
+<hypotheses>
+Belief: Users can easily navigate the tool's interface.
+Method: Prototype / User Testing
+Date: 2022-06-18
+Completed: True
+Main metric: Desirability
+Status: Validated
+Why: User testing showed high levels of navigational ease and satisfaction.
+New thinking: Continue to refine and simplify the user interface based on user feedback.
+
+***
+Belief: The tool provides accurate and valuable data insights.
+Method: Field Trial / Data Analysis
+Date: 2022-06-20
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: Field trials showed the tool's data insights align with business objectives.
+New thinking: Explore additional features for deeper data insights.
+
+***
+Belief: The tool can handle large volumes of data without performance degradation.
+Method: Prototype / Data Analysis
+Date: 2022-06-22
+Completed: True
+Main metric: Feasibility
+Status: Validated
+Why: Stress tests showed the tool can handle large data volumes efficiently.
+New thinking: Continue to optimize for performance as data volumes grow.
+</hypotheses>
+
+~~~Launch~~~
+Start date: 2022-06-25
+End date: 2022-07-02
+Comment: Product launched to the public.
+
+<hypotheses>
+Belief: The tool will be well-received in the market.
+Method: Market Analysis / Survey(s)
+Date: 2022-06-26
+Completed: True
+Main metric: Desirability
+Status: Validated
+Why: Post-launch surveys showed positive user feedback and market reception.
+New thinking: Implement a strong marketing strategy to increase market penetration.
+
+***
+Belief: Users are willing to pay our subscription price for the tool.
+Method: Market Analysis / Survey(s)
+Date: 2022-06-28
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: Sales figures and user surveys indicate acceptance of our pricing model.
+New thinking: Explore tiered pricing models to cater to different user needs.
+
+***
+Belief: The tool will increase productivity for BigQuery users.
+Method: User Feedback / Data Analysis
+Date: 2022-06-30
+Completed: True
+Main metric: Strategic Fit
+Status: Validated
+Why: Users report significant improvements in productivity using our tool.
+New thinking: Highlight productivity benefits in marketing and user education efforts.
+</hypotheses>
+
+~~~Scale~~~
+Start date: 2022-07-03
+End date: 2022-07-10
+Comment: Scaling operations to meet growing demand.
+
+<hypotheses>
+Belief: We can scale our operations to meet growing user demand.
+Method: Operations Analysis
+Date: 2022-07-04
+Completed: True
+Main metric: Feasibility
+Status: Validated
+Why: Operational analytics showed we can efficiently scale our services.
+New thinking: Invest in infrastructure and resources to support further scaling.
+
+***
+Belief: Scaling operations will increase our market share.
+Method: Market Analysis
+Date: 2022-07-06
+Completed: True
+Main metric: Strategic Fit
+Status: Validated
+Why: Market analysis showed an increase in our market share post-scaling.
+New thinking: Continue to innovate and improve the tool to maintain market competitiveness.
+
+***
+Belief: The tool can maintain high performance levels during peak usage times.
+Method: Data Analysis / Field Trial
+Date: 2022-07-08
+Completed: True
+Main metric: Feasibility
+Status: Validated
+Why: Performance tests during peak usage times showed no degradation of service.
+New thinking: Continue to monitor performance and optimize as necessary to handle increased loads.
+</hypotheses>
+
+~~~Sustain~~~
+Start date: 2022-07-11
+End date: 2022-07-18
+Comment: Continuous improvement to sustain growth.
+
+<hypotheses>
+Belief: We can continue to innovate and provide valuable updates to the tool.
+Method: Thought Experiment / Market Analysis
+Date: 2022-07-12
+Completed: True
+Main metric: Strategic Fit
+Status: Validated
+Why: Our team continues to identify and implement valuable features and improvements.
+New thinking: Establish a consistent product update cycle to maintain user interest and satisfaction.
+
+***
+Belief: The tool will maintain its relevance in the face of competition.
+Method: Market Analysis / Competitive Analysis
+Date: 2022-07-14
+Completed: True
+Main metric: Strategic Fit
+Status: Validated
+Why: Despite emerging competitors, our tool maintains a strong market position due to its unique features and reliable performance.
+New thinking: Monitor competition closely and respond with necessary feature updates and improvements.
+
+***
+Belief: We can maintain high user satisfaction and loyalty over time.
+Method: User Feedback / Survey(s)
+Date: 2022-07-16
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: User feedback and surveys showed high levels of satisfaction and loyalty.
+New thinking: Implement a robust user feedback system to continue improving the user experience.
+</hypotheses>
+
+
+# FutureForesight Workshop Service
+Start date: 2022-06-02
+Completed: False
+Started: True
+Phase: MVP
+Project description: FutureForesight is a Workshop service designed to provide deep insights into futures, foresights, and strategic change, with an emphasis on facilitating actionable strategies and long-term planning.
+
+Start date: 2022-06-02
+End date: 2022-06-14
+Comment: Identifying the need for strategic foresight in organizations.
+
+<hypotheses>
+Belief: Many organizations lack a structured approach to strategic foresight.
+Method: Interviews / Survey(s)
+Date: 2022-06-05
+Completed: True
+Main metric: Desirability
+Status: Validated
+Why: Interviews and surveys with organization leaders revealed a significant gap in structured strategic foresight.
+New thinking: A workshop service could fill this gap by offering a structured approach to futures and strategic change.
+
+***
+Belief: Organizations will be interested in a workshop service for strategic foresight.
+Method: Interviews / Market Analysis
+Date: 2022-06-10
+Completed: True
+Main metric: Desirability
+Status: Validated
+Why: Market analysis and interviews showed strong interest in a strategic foresight workshop service.
+New thinking: Continue to the Idea phase to develop the workshop concept further.
+</hypotheses>
+
+~~~Idea~~~
+Start date: 2022
+Start date: 2022-06-15
+End date: 2022-06-30
+Comment: Developing the concept for the strategic foresight workshop.
+
+<hypotheses>
+Belief: A workshop service should include hands-on activities for participants.
+Method: Thought experiment / Interviews
+Date: 2022-06-18
+Completed: True
+Main metric: Desirability
+Status: Validated
+Why: Thought experiments and interviews suggested that hands-on activities would improve engagement and learning outcomes.
+New thinking: Include interactive activities in the workshop design.
+
+***
+Belief: The workshop can be effectively delivered online.
+Method: Desk research / Interviews
+Date: 2022-06-22
+Completed: True
+Main metric: Feasibility
+Status: Validated
+Why: Desk research and interviews indicate that online delivery of workshops is feasible and preferred due to remote working conditions.
+New thinking: The workshop should be designed for online delivery.
+
+***
+Belief: Organizations would be willing to pay for a premium workshop service.
+Method: Market Analysis / Interviews
+Date: 2022-06-28
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: Interviews and market analysis showed that organizations are willing to invest in high-quality professional development services.
+New thinking: Consider a premium pricing strategy for the workshop service.
+</hypotheses>
+
+~~~MVP~~~
+Start date: 2022-07-01
+Comment: Beginning to test the minimum viable product of the workshop service.
+
+<hypotheses>
+Belief: A pilot version of the workshop can be developed within a month.
+Method: Thought experiment / Desk research
+Date: 2022-07-01
+Completed: False
+Main metric: Feasibility
+Status: In Progress
+Why: The design and development process for the workshop is still ongoing.
+New thinking: Continue to monitor progress and adjust the timeline if necessary.
+</hypotheses>
+
+~~~Launch~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+~~~Scale~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+~~~Sustain~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+
+# AI Distance Learning Service Project
+Start date: 2022-04-01
+Completed: False
+Started: True
+Phase: Abandoned
+Project description: The objective of this project was to create an online distance learning platform offering comprehensive courses on AI. We aimed to make AI education accessible to all.
+
+Start date: 2022-04-01
+End date: 2022-04-15
+Comment: Identified a market need for accessible AI education.
+
+~~~Problem~~~
+<hypotheses>
+Belief: There is a significant demand for online AI education.
+Method: Market Analysis / Survey(s)
+Date: 2022-04-07
+Completed: True
+Main metric: Strategic fit
+Status: Validated
+Why: Market analysis and survey results confirmed a high demand for online AI learning resources.
+New thinking: It is worth proceeding to the idea phase.
+
+***
+Belief: Individuals are willing to pay for quality AI courses.
+Method: Survey(s) / Interviews
+Date: 2022-04-13
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: Surveys and interviews indicated that potential users are willing to pay for comprehensive and quality AI courses.
+New thinking: Consider various pricing models for the online platform.
+</hypotheses>
+
+~~~Idea~~~
+Start date: 2022-04-16
+Comment: Developing the concept for the AI distance learning platform.
+
+<hypotheses>
+Belief: The platform can be developed within six months.
+Method: Thought experiment / Desk research
+Date: 2022-04-20
+Completed: True
+Main metric: Feasibility
+Status: Invalidated
+Why: Desk research and thought experiments suggested the timeline was too ambitious given the complexity of the project.
+New thinking: Consider extending the development timeline.
+
+***
+Belief: The platform can offer unique features that distinguish it from competitors.
+Method: Desk research / Interviews
+Date: 2022-04-24
+Completed: True
+Main metric: Strategic fit
+Status: Invalidated
+Why: Desk research and interviews revealed the market is saturated with similar platforms, making it difficult to offer unique features.
+New thinking: Reconsider the concept and feasibility of the platform.
+
+***
+Belief: The platform can attract high-profile AI experts as instructors.
+Method: Interviews
+Date: 2022-04-28
+Completed: True
+Main metric: Desirability
+Status: Invalidated
+Why: Interviews with potential AI experts revealed a lack of interest in contributing to a new, unproven platform.
+New thinking: The lack of unique features and difficulty in attracting high-profile instructors led to the decision to abandon the project.
+</hypotheses>
+
+~~~Launch~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+~~~Scale~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+~~~Sustain~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+
+# AI Expert Connect Project
+Start date: 2022-06-01
+Completed: False
+Started: True
+Phase: Idea
+Project description: This project aims to create a platform that connects individuals and businesses with AI experts through video calls for advice and consultation.
+
+~~~Problem~~~
+Start date: 2022-06-01
+End date: 2022-06-15
+Comment: Identified a gap in the market for easy access to AI expertise.
+
+<hypotheses>
+Belief: There is a demand for a service connecting people to AI experts.
+Method: Market Analysis / Survey(s)
+Date: 2022-06-07
+Completed: True
+Main metric: Strategic fit
+Status: Validated
+Why: Market analysis and surveys showed a significant demand for access to AI experts.
+New thinking: Proceed to the idea phase with the concept of creating a video call platform for AI consultations.
+
+***
+Belief: Businesses will pay for expert AI advice.
+Method: Survey(s) / Interviews
+Date: 2022-06-13
+Completed: True
+Main metric: Viability
+Status: Validated
+Why: Surveys and interviews indicated businesses are willing to pay for expert AI advice to help guide their AI strategies.
+New thinking: Consider various pricing models for the platform during the idea phase.
+</hypotheses>
+
+~~~Idea~~~
+Start date: 2022-06-16
+Comment: Developing the concept of the AI expert connection platform.
+
+<hypotheses>
+Belief: We can attract AI experts to join the platform.
+Method: Desk research / Interviews
+Date: Ongoing
+Completed: False
+Main metric: Desirability
+Status: Not yet validated
+Why: Initial desk research and interviews are promising but not yet completed.
+New thinking: Continue to validate this hypothesis.
+
+***
+Belief: A user-friendly interface can be developed for the platform.
+Method: Prototype / Thought experiment
+Date: Ongoing
+Completed: False
+Main metric: Feasibility
+Status: Not yet validated
+Why: Initial prototyping and thought experiments are ongoing.
+New thinking: Continue to validate this hypothesis.
+</hypotheses>
+
+~~~MVP~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+~~~Launch~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+~~~Scale~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+~~~Sustain~~~
+Start date: Unstarted
+End date: Unfinished
+Comment: No comment
+
+<hypotheses></hypotheses>
+
+
+
+
+
+
