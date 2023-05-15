@@ -26,6 +26,9 @@ export interface Project {
   phases: Phase[];
 }
 
+const phaseOrder = ["problem", "idea", "mvp", "launch", "scale", "sustain"];
+const allowedPhases = new Set(phaseOrder);
+
 const getProjectsData = async () => {
   const contentDirectory = path.join(process.cwd(), "src/content/projects");
 
@@ -47,8 +50,12 @@ const getProjectsData = async () => {
       .readdirSync(projectDirectory)
       .filter(
         (dir) =>
-          !dir.startsWith(".") && !dir.startsWith("_") && dir !== "index.md"
-      );
+          !dir.startsWith(".") &&
+          !dir.startsWith("_") &&
+          dir !== "index.md" &&
+          allowedPhases.has(dir) // Only include allowed phases
+      )
+      .sort((a, b) => phaseOrder.indexOf(a) - phaseOrder.indexOf(b)); // Sort phases according to the order specified in phaseOrder
 
     const phases: Phase[] = phaseNames.map((phaseName) => {
       const phaseDirectory = path.join(projectDirectory, phaseName);
