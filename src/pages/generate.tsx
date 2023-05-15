@@ -1,6 +1,7 @@
 import React, { ChangeEvent, FC, useEffect, useRef, useState } from "react";
 
 interface FormState {
+  title: string;
   hypothesis: string;
   method: string;
   date: string;
@@ -33,6 +34,7 @@ const statuses = [
 
 const MyForm: FC = () => {
   const [form, setForm] = useState<FormState>({
+    title: "-", // The new 'title' field
     hypothesis: "-",
     rationale: "-",
     method: methods[0], // default to the first item in the methods array
@@ -77,6 +79,7 @@ const MyForm: FC = () => {
               : key === "newThinking"
               ? "New thinking"
               : key.replace(/^./, (str) => str.toUpperCase());
+
           if (key === "evidence") {
             // Handle evidence array specially
             return `${formattedKey}:\n${value
@@ -126,6 +129,16 @@ const MyForm: FC = () => {
   return (
     <div className="space-y-4 max-w-5xl grid mt-12 gap-x-8 grid-cols-4 mx-auto text-white">
       <div className="col-span-2">
+        <div>
+          <label className="block mt-4">Title:</label>{" "}
+          <input
+            type="text"
+            name="title"
+            value={form.title}
+            onChange={handleChange}
+            className="mt-1 block w-full text-black rounded-md border-black shadow-sm"
+          />
+        </div>
         <div>
           <label className="block mt-4">Hypothesis:</label>
           <input
