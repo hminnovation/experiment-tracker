@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import DateComponent from "./DateComponent";
 
 const ProjectComponent: React.FC<{ data: any }> = ({ data }) => {
   return (
@@ -12,7 +13,11 @@ const ProjectComponent: React.FC<{ data: any }> = ({ data }) => {
       <p>Started: {data.data.started ? "Yes" : "No"}</p>
       <p>Completed: {data.data.completed ? "Yes" : "No"}</p>
       <p>Phase: {data.data.phase || "No phase provided"}</p>
-      <p>Start Date: {data.data.start_date || "No start date provided"}</p>
+      <p>
+        Start Date:{" "}
+        {<DateComponent dateString={data.data.start_date} /> ||
+          "No start date provided"}
+      </p>
     </div>
   );
 };
