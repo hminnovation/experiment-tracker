@@ -20,7 +20,14 @@ def clean_date_string(date_str):
     return date_str.strip()  # Remove any leading/trailing whitespace
 
 
-def create_hypothesis_content(hypothesis_data):
+def create_hypothesis_content(hypothesis_data, project_title, project_dir_name):
+    hypothesis_data["project_title"] = project_title
+    hypothesis_data["project_dir_name"] = project_dir_name
+    for key, value in hypothesis_data.items():
+        if isinstance(value, str) and value.startswith("- "):
+            hypothesis_data[key] = [
+                line.strip("- ") for line in value.split("\n") if line.strip()
+            ]
     yaml_content = yaml.dump(
         {snake_case(key): value for key, value in hypothesis_data.items()},
         allow_unicode=True,
@@ -29,23 +36,27 @@ def create_hypothesis_content(hypothesis_data):
     return f"---\n{yaml_content}---\n"
 
 
-def create_phase_content(phase_name, phase_data):
-    phase_content = [f"title: {phase_name}"]
-    for key, value in phase_data.items():
-        phase_content.append(f"{key}: {value}")
-    return "---\n" + "\n".join(phase_content) + "\n---\n"
+def create_phase_content(phase_name, phase_data, project_title, project_dir_name):
+    phase_data["title"] = phase_name
+    phase_data["project_title"] = project_title
+    phase_data["project_dir_name"] = project_dir_name
+    yaml_content = yaml.dump(
+        {snake_case(key): value for key, value in phase_data.items()},
+        allow_unicode=True,
+        default_flow_style=False,
+    )
+    return f"---\n{yaml_content}---\n"
 
 
 def create_project_content(project_name, project_data):
-    return f"""---
-title: "{project_name}"
-start_date: "{project_data.get('Start date', '')}"
-completed: "{project_data.get('Completed', '')}"
-started: "{project_data.get('Started', '')}"
-phase: "{project_data.get('Phase', '')}"
-description: "{project_data.get('Project description', '')}"
----
-"""
+    project_data["title"] = project_name
+    project_data["project_dir_name"] = snake_case(project_name)
+    yaml_content = yaml.dump(
+        {snake_case(key): value for key, value in project_data.items()},
+        allow_unicode=True,
+        default_flow_style=False,
+    )
+    return f"---\n{yaml_content}---\n"
 
 
 def process_file(input_file, base_dir):
@@ -67,7 +78,7 @@ def process_file(input_file, base_dir):
         project_info = lines[1:6]
         project_data = {}
         for line in project_info:
-            key, value = line.split(":")
+            key, value = line.split(":", 1)
             project_data[key.strip()] = value.strip()
 
         project_content = create_project_content(title, project_data)
@@ -86,7 +97,9 @@ def process_file(input_file, base_dir):
 
             phase_data = {}
             for line in phase_lines[:3]:
-                key, value = line.split(":") if ":" in line else (line, "Unspecified")
+                key, value = (
+                    line.split(":", 1) if ":" in line else (line, "Unspecified")
+                )
                 key = snake_case(key.strip())
                 value = value.strip()
 
@@ -96,7 +109,9 @@ def process_file(input_file, base_dir):
 
                 phase_data[key] = value
 
-            phase_content = create_phase_content(phase_name, phase_data)
+            phase_content = create_phase_content(
+                phase_name, phase_data, title, project_dir_name
+            )
             write_to_file(os.path.join(phase_dir_path, "index.md"), phase_content)
 
             if "<hypotheses>" in phase_block:
@@ -110,12 +125,24 @@ def process_file(input_file, base_dir):
                 for i, hypothesis in enumerate(hypotheses):
                     hypothesis_lines = hypothesis.split("\n")
                     hypothesis_data = {}
+                    key = ""
                     for line in hypothesis_lines:
                         if line.strip() != "":
-                            key, value = line.split(":")
-                            hypothesis_data[key.strip()] = value.strip()
+                            if ":" in line:  # This line starts a new key-value pair
+                                key, value = line.split(
+                                    ":", 1
+                                )  # Split the line at the first colon
+                                key = key.strip()
+                                value = value.strip()
+                            else:  # This line continues the last key-value pair
+                                value = (
+                                    hypothesis_data.get(key, "") + "\n" + line.strip()
+                                )
+                            hypothesis_data[key] = value
 
-                    hypothesis_content = create_hypothesis_content(hypothesis_data)
+                    hypothesis_content = create_hypothesis_content(
+                        hypothesis_data, title, project_dir_name
+                    )
                     write_to_file(
                         os.path.join(
                             phase_dir_path, "hypotheses", f"hypothesis{i+1}.md"
